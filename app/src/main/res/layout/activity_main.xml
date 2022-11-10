@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<!--    &lt;!&ndash; Main Title &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="To Do List"-->
+<!--        android:textColor="#2B8FB6"-->
+<!--        android:textSize="50dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_gravity="center"/>-->
+
+    <!-- To List -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/list_background"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- To List Title + Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="10dp">
+
+            <!-- To List Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="To List"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:textStyle="bold"/>
+
+            <!-- 임시 -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- To List 추가 버튼 -->
+            <android.widget.Button
+                android:id="@+id/toListBtn"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:background="@drawable/item_background"
+                android:text="+"
+                android:textSize="30dp"
+                android:textColor="#2B8FB6" />
+
+        </LinearLayout>
+
+        <!-- to list inner box -->
+        <LinearLayout
+            android:id="@+id/toListInnerBox"
+            android:layout_width="360dp"
+            android:layout_height="205dp"
+            android:background="@drawable/item_background"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="340dp"
+                android:layout_height="190dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <CheckBox
+                    android:id="@+id/toListCheckBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <CheckBox
+                    android:id="@+id/toListCheckBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Do List -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/list_background"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Do List Title + Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="10dp">
+
+            <!-- Do List Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Do List"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:textStyle="bold"/>
+
+            <!-- 임시 -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- do list inner box -->
+        <LinearLayout
+            android:id="@+id/doListInnerBox"
+            android:layout_width="360dp"
+            android:layout_height="205dp"
+            android:background="@drawable/item_background"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="344dp"
+                android:layout_height="190dp"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+                <CheckBox
+                    android:id="@+id/doListCheckBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/doListCheckBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
